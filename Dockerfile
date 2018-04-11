@@ -43,6 +43,7 @@ RUN ./src/build/install-build-deps.sh \
 WORKDIR /webrtc-checkout/src
 
 RUN gn gen out/Default
+# RUN gn gen out/Default --args='is_debug=false'
 
 RUN ninja -C out/Default
 
